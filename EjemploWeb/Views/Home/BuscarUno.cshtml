@@ -1,0 +1,19 @@
+﻿@using EjemploWeb.Models;
+
+@{
+    ViewData["Title"] = "Home Page";
+  
+    Persona persona = ViewBag.personaEncontrada;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+    <div>
+        <label>@persona.Nombres</label>
+        <label>@persona.Apellidos</label>
+    </div>
+
+</div>

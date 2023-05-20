@@ -1,0 +1,44 @@
+﻿@using EjemploWeb.Models;
+
+@{
+    ViewData["Title"] = "Home Page";
+    List<Persona> listado = ViewBag.listadoPersonas;
+  
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+   
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (Persona item in listado)
+            {
+                <tr>
+                    <td>@item.Nombres</td>
+                    <td>@item.Apellidos</td>
+                </tr>
+            }
+        </tbody>
+
+
+
+    </table>  
+
+    
+
+
+</div>
